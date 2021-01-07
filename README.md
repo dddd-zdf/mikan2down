@@ -15,7 +15,7 @@ Future
 to-do:  
   - [ ] fix bug repetitive download (priority)    
   - [ ] Usage in README    
-  - [ ] JSON file input  
+  - [x] ~~JSON file input~~  
   - [ ] multiple match  
 
 

@@ -4,13 +4,20 @@ This is an RSS scanner (for now it is exclusively for Mikan project) to check th
 
 Self-trigger can be implemented by Calendar.app. 
 
+Usage
+-----
+
+Incoming
 
 Future
 ------
 
 to-do:  
-  - [ ] JSON file input
+  - [ ] fix bug repetitive download (priority)    
+  - [ ] Usage in README    
+  - [ ] JSON file input  
   - [ ] multiple match  
+
 
 
 Reference

@@ -17,6 +17,7 @@ to-do:
   - [ ] Usage in README    
   - [x] ~~JSON file input~~  
   - [x] ~~multiple match~~  
+  - [x] ~~notification~~  
 
 
 

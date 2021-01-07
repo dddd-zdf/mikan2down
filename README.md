@@ -5,6 +5,13 @@ This is an RSS scanner (for now it is exclusively for Mikan project) to check th
 Self-trigger can be implemented by Calendar.app. 
 
 
+Future
+------
+
+to-do:  
+  - [ ] JSON file input
+  - [ ] multiple match  
+
 
 Reference:   
     [aria2 RPC interface](http://aria2.github.io/manual/en/html/aria2c.html#rpc-interface)  

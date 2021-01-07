@@ -11,9 +11,12 @@ now = datetime.datetime.now().strftime("%Y-%m")
 t = datetime.datetime.now().timetuple()
 today = now +"-"+ str(t.tm_mday)
 
+
+#JSON input in progress
+'''
 with open("config.json",'r') as load_f:
     sublist = json.load(load_f)
-
+'''
 
 def download(torrent):
      #port 16800 is for Motrix, the default port for aria2 is 6800
@@ -29,7 +32,8 @@ while True:
 
      for item in rss_mikan['entries']:
           date = re.split(r'T',item['published'])[0]
-          keybool = re.findall(key, item['id'])
+          #keybool = re.findall(key, item['id']) JSON input in progress
+          keybool = re.findall('简体', item['id'])
           if date == today and keybool != []:
                torrent = rss_mikan['entries'][0]['links'][2]['href']
                download(torrent)

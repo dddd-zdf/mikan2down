@@ -6,10 +6,14 @@ import re
 from lxml import etree
 import datetime
 import time
-
+import json
 now = datetime.datetime.now().strftime("%Y-%m")
-time = datetime.datetime.now().timetuple()
-today = now +"-"+ str(time.tm_mday)
+t = datetime.datetime.now().timetuple()
+today = now +"-"+ str(t.tm_mday)
+
+with open("config.json",'r') as load_f:
+    sublist = json.load(load_f)
+
 
 def download(torrent):
      #port 16800 is for Motrix, the default port for aria2 is 6800
@@ -25,8 +29,8 @@ while True:
 
      for item in rss_mikan['entries']:
           date = re.split(r'T',item['published'])[0]
-          lang = re.split(r'\[',item['id'])[3][0]
-          if date == today and lang == '简':
+          keybool = re.findall(key, item['id'])
+          if date == today and keybool != []:
                torrent = rss_mikan['entries'][0]['links'][2]['href']
                download(torrent)
                exit()

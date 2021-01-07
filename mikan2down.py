@@ -7,16 +7,22 @@ from lxml import etree
 import datetime
 import time
 import json
-now = datetime.datetime.now().strftime("%Y-%m")
-t = datetime.datetime.now().timetuple()
-today = now +"-"+ str(t.tm_mday)
+import pync
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
+def today():
+     now = datetime.datetime.now().strftime("%Y-%m")
+     t = datetime.datetime.now().timetuple()
+     today = now +"-"+ str(t.tm_mday)
+     return today
 
 
 #JSON input in progress
-'''
+
 with open("config.json",'r') as load_f:
     sublist = json.load(load_f)
-'''
+
 
 def download(torrent):
      #port 16800 is for Motrix, the default port for aria2 is 6800
@@ -24,21 +30,23 @@ def download(torrent):
      s.aria2.addUri([torrent])
 
 
-
-ssl._create_default_https_context = ssl._create_unverified_context
-rss_mikan = feedparser.parse('https://mikanani.me/RSS/Bangumi?bangumiId=2335&subgroupid=92')
-
 while True:
 
-     for item in rss_mikan['entries']:
-          date = re.split(r'T',item['published'])[0]
-          #keybool = re.findall(key, item['id']) JSON input in progress
-          keybool = re.findall('简体', item['id'])
-          if date == today and keybool != []:
-               torrent = rss_mikan['entries'][0]['links'][2]['href']
-               download(torrent)
-               exit()
+     for rss in sublist:
+          feed = feedparser.parse(rss['rss'])
+          for item in feed['entries']:
+               date = re.split(r'T',item['published'])[0]
+               keybool = re.findall(rss['key'], item['id'])
+               if date == today() and keybool != []:
+                    torrent = feed['entries'][0]['links'][2]['href']
+                    download(torrent)
+                    print('downloading '+ rss['title'])
+                    pync.notify('downloading '+ rss['title'])
+                    # downloading = ??? fix repetitive download
      time.sleep(60)
+
+
+#rss = feedparser.parse('https://mikanani.me/RSS/Bangumi?bangumiId=2335&subgroupid=92')
 
 
 

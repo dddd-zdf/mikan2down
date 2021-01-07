@@ -1,17 +1,28 @@
-import re
+import feedparser
+import ssl
+#import requests
 import xmlrpc.client
+import re
+from lxml import etree
+import datetime
+import time
 import json
+import os
+import pync
 
+pync.notify('Hello World')
+pync.notify('Hello World', title='Python')
+'''
 
-import json
 
 with open("config.json",'r') as load_f:
     sublist = json.load(load_f)
 
-print(sublist[1]['title'])
 
-
-
+for rss in sublist:
+    #feed = feedparser.parse(rss['rss'])
+    print(rss['rss'])
+'''
 '''
 f = open('config.json')
 config = json.loads(f)

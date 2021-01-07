@@ -1,0 +1,35 @@
+'id': '【豌豆字幕组】[进击的巨人 / Shingeki_no_Kyojin][63][简体][1080P][MP4]', 
+'guidislink': False, 
+'links': [
+    {
+        'rel': 'alternate', 
+        'type': 'text/html', 
+        'href': 'https://mikanani.me/Home/Episode/da6e6b6155787f317ca943a066be671c7244e8eb'
+    }, 
+
+    {
+        'rel': 'alternate', 
+        'type': 'text/html', 
+        'href': 'https://mikanani.me/Home/Episode/da6e6b6155787f317ca943a066be671c7244e8eb'
+    },
+    {
+        'type': 'application/x-bittorrent', 
+        'length': '344792768', 
+        'href': 'https://mikanani.me/Download/20201228/da6e6b6155787f317ca943a066be671c7244e8eb.torrent', 
+        'rel': 'enclosure'
+    }
+    ], 
+
+'link': 'https://mikanani.me/Home/Episode/da6e6b6155787f317ca943a066be671c7244e8eb', 
+'title': '【豌豆字幕组】[进击的巨人 / Shingeki_no_Kyojin][63][简体][1080P][MP4]', 
+'title_detail': {'type': 'text/plain', 'language': None, 'base': 'https://mikanani.me/RSS/Bangumi?bangumiId=2335&subgroupid=92', 
+'value': '【豌豆字幕组】[进击的巨人 / Shingeki_no_Kyojin][63][简体][1080P][MP4]'}, 
+'summary': '【豌豆字幕组】[进击的巨人 / Shingeki_no_Kyojin][63][简体][1080P][MP4][328.82 MB]',
+'summary_detail': {
+    'type': 'text/html', 'language': None, 'base': 'https://mikanani.me/RSS/Bangumi?	bangumiId=2335&subgroupid=92', 
+    'value': '【豌豆字幕组】[进击的巨人 / Shingeki_no_Kyojin][63][简体]	[1080P][MP4][328.82 MB]'
+    }, 
+'contentlength': '344792768', 
+'published': '2020-12-28T04:14:12.449', 
+'published_parsed': time.struct_time(tm_year=2020, tm_mon=12, tm_mday=28, tm_hour=4, 	tm_min=14, tm_sec=12, tm_wday=0, tm_yday=363, tm_isdst=0), 
+'torrent': ''

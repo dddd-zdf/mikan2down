@@ -16,7 +16,7 @@ to-do:
   - [ ] fix bug repetitive download (priority)    
   - [ ] Usage in README    
   - [x] ~~JSON file input~~  
-  - [ ] multiple match  
+  - [x] ~~multiple match~~  
 
 
 

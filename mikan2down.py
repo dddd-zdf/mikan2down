@@ -5,6 +5,7 @@ import xmlrpc.client
 import re
 from lxml import etree
 import datetime
+import time
 
 now = datetime.datetime.now().strftime("%Y-%m")
 time = datetime.datetime.now().timetuple()
@@ -15,16 +16,21 @@ def download(torrent):
      s = xmlrpc.client.ServerProxy('http://localhost:16800/rpc')
      s.aria2.addUri([torrent])
 
+
+
 ssl._create_default_https_context = ssl._create_unverified_context
 rss_mikan = feedparser.parse('https://mikanani.me/RSS/Bangumi?bangumiId=2335&subgroupid=92')
 
+while True:
 
-for item in rss_mikan['entries']:
-     date = re.split(r'T',item['published'])[0]
-     lang = re.split(r'\[',item['id'])[3][0]
-     if date == today and lang == '简':
-          torrent = rss_mikan['entries'][0]['links'][2]['href']
-          download(torrent)
+     for item in rss_mikan['entries']:
+          date = re.split(r'T',item['published'])[0]
+          lang = re.split(r'\[',item['id'])[3][0]
+          if date == today and lang == '简':
+               torrent = rss_mikan['entries'][0]['links'][2]['href']
+               download(torrent)
+               exit()
+     time.sleep(60)
 
 
 

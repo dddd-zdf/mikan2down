@@ -1,3 +1,5 @@
 # mikan2down
 
-This is an RSS-like url retriever to send url through RPC to download. It can use calendar.app to launch itself regularly.
+This is an RSS scanner (for now it is exclusively for Mikan project) to check the feed regularly and retrive the targeted file url to aria2-like downloader through RPC (xml in this case).
+
+Self-trigger can be implemented by Calendar.app. 

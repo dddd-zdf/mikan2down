@@ -13,8 +13,8 @@ Future
 ------
 
 to-do:  
-  - [ ] fix bug repetitive download (priority)    
   - [ ] Usage in README    
+  - [x] ~~fix bug repetitive download~~    
   - [x] ~~JSON file input~~  
   - [x] ~~multiple match~~  
   - [x] ~~notification~~  

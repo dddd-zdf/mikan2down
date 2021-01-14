@@ -14,8 +14,16 @@ import pync
 with open("config.json",'r') as load_f:
     sublist = json.load(load_f)
 
-print(sublist['interval'])
+check = {}
 
+for item in sublist['list']:
+    check[item['title']]=0
+print(check)
+
+'''
+for item in sublist['list']:
+    if item['title'] == 'jjdjj':
+'''
 
 
 

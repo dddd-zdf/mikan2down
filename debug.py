@@ -10,26 +10,11 @@ import json
 import os
 import pync
 
-pync.notify('Hello World')
-pync.notify('Hello World', title='Python')
-'''
-
 
 with open("config.json",'r') as load_f:
     sublist = json.load(load_f)
 
-
-for rss in sublist:
-    #feed = feedparser.parse(rss['rss'])
-    print(rss['rss'])
-'''
-'''
-f = open('config.json')
-config = json.loads(f)
-
-print(config)
-'''
-
+print(sublist['interval'])
 
 
 

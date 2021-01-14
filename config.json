@@ -1,12 +1,15 @@
-[
-    {
-        "title": "进击的巨人",
-        "rss": "https://mikanani.me/RSS/Bangumi?bangumiId=2335&subgroupid=92",
-        "key": "简体"
-    },
-    {
-        "title": "jjdjj",
-        "rss": "https://mikanani.me/RSS/Bangumi?bangumiId=2335&subgroupid=552",
-        "key": "CHT"
-    }
-]
+{
+    "interval":30,
+    "list":[
+        {
+            "title": "进击的巨人",
+            "rss": "https://mikanani.me/RSS/Bangumi?bangumiId=2335&subgroupid=92",
+            "key": "简体"
+        },
+        {
+            "title": "jjdjj",
+            "rss": "https://mikanani.me/RSS/Bangumi?bangumiId=2335&subgroupid=552",
+            "key": "CHT"
+        }
+    ]
+}

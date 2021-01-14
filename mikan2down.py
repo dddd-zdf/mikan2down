@@ -23,6 +23,7 @@ def today():
 with open("config.json",'r') as load_f:
     sublist = json.load(load_f)
 
+interval = sublist['interval']
 
 def download(torrent):
      #port 16800 is for Motrix, the default port for aria2 is 6800
@@ -32,7 +33,7 @@ def download(torrent):
 
 while True:
 
-     for rss in sublist:
+     for rss in sublist['list']:
           feed = feedparser.parse(rss['rss'])
           for item in feed['entries']:
                date = re.split(r'T',item['published'])[0]
@@ -42,35 +43,21 @@ while True:
                     download(torrent)
                     print('downloading '+ rss['title'])
                     pync.notify('downloading '+ rss['title'])
-                    # downloading = ??? fix repetitive download
-     time.sleep(60)
 
-
-#rss = feedparser.parse('https://mikanani.me/RSS/Bangumi?bangumiId=2335&subgroupid=92')
-
-
+     time.sleep(interval)
 
 #discarded requests method
 '''
 info = requests.get('https://mikanani.me/Home/Bangumi/2335')
 selector = etree.HTML(info.text)
-
 content = selector.xpath("//*[@id='sk-container']/div[2]/table[8]/tbody/")
-
-
 print(content)
-
 #retrieve the first two items
-
 date = selector.xpath("//*[@id='sk-container']/div[2]/table[8]/tbody/tr[1]/td[3]/text()")[0][0:10]
-
 title = selector.xpath("//*[@id='sk-container']/div[2]/table[8]/tbody/tr[1]/td[1]/a[1]/text()")[0]
 lang = re.split(r'\[',title)[3][0]
-
-
 if date = time.strftime("%Y/%m/%d") and lang = '简':
      magnet = selector.xpath('//*[@id="sk-container"]/div[2]/table[8]/tbody/tr[1]/td[1]/a[2]/@data-clipboard-text')
      download(magnet)
-
 #2020/12/28 04:14
 '''

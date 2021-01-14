@@ -17,13 +17,15 @@ def today():
      today = now +"-"+ str(t.tm_mday)
      return today
 
-
-#JSON input in progress
-
 with open("config.json",'r') as load_f:
     sublist = json.load(load_f)
-
 interval = sublist['interval']
+#initialize check list and timer for repetitive download check
+check = {}
+timer = {}
+for item in sublist['title']:
+     check[item['title']]=0
+     timer[item['title']]=0
 
 def download(torrent):
      #port 16800 is for Motrix, the default port for aria2 is 6800
@@ -32,17 +34,25 @@ def download(torrent):
 
 
 while True:
-
      for rss in sublist['list']:
+          if check[rss['title']] == 1:
+               if timer[rss['title']] >= 86400/interval:
+                    timer[rss['title']] = 0
+                    check[rss['title']] = 0
+                    else:
+                         timer[rss['title']] += 1
           feed = feedparser.parse(rss['rss'])
           for item in feed['entries']:
                date = re.split(r'T',item['published'])[0]
                keybool = re.findall(rss['key'], item['id'])
-               if date == today() and keybool != []:
+               if date == today() and keybool != [] and check[rss['title']] == 0:
                     torrent = feed['entries'][0]['links'][2]['href']
                     download(torrent)
                     print('downloading '+ rss['title'])
                     pync.notify('downloading '+ rss['title'])
+                    check[rss['title']] = 1
+
+
 
      time.sleep(interval)
 

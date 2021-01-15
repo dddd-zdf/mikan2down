@@ -18,7 +18,7 @@ config.json
         {  
         "title": the name you want for the bangumi,  
         "rss": the rss url for the bangumi,  
-        "key": the keyword to match for the file (most cases it should be the keyword for the language you want)  
+        "key": the keyword to match for the file (in most cases it should be the keyword for the language you want)  
         }  
 ]  
 ```

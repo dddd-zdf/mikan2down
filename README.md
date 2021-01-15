@@ -7,7 +7,26 @@ Self-trigger can be implemented by Calendar.app.
 Usage
 -----
 
-This script can scan the rss feed list from config.json at a given interval. When the rss feed gets updated it can find an item matched with the keyword and push it to rpc port (6800 for aria2 and 16800 for motrix). More details can be found in the comments in config.json.
+This script can scan the rss feed list from config.json at a given interval. When the rss feed gets updated it can find an item matched with the keyword and push it to downloader (aria2-like) through RPC. **Be sure to edit config.json.**. You can look into config.json and be able to understand it easily.
+
+config.json
+-----------
+
+"interval": interval between each scan in seconds.
+"port": RPC port (16800 for motrix, 6800 for aria2 default)
+"list":[
+        {
+        "title": the name you want for the bangumi,
+        "rss": the rss url for the bangumi,
+        "key": the keyword to match for the file (most cases it should be the keyword for the language you want)
+        }
+]
+
+
+rss example
+-----------
+
+This is the an example retreived from a mikan-project rss feed. Support for more sites may come in the future.
 
 Future
 ------

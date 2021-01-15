@@ -17,7 +17,8 @@ to-do:
   - [x] ~~fix bug repetitive download~~    
   - [x] ~~JSON file input~~  
   - [x] ~~multiple match~~  
-  - [x] ~~notification~~  
+  - [x] ~~notification (MacOS)~~
+  - [ ] notification (Windows)
 
 
 

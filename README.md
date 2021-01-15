@@ -7,7 +7,7 @@ Self-trigger can be implemented by Calendar.app.
 Usage
 -----
 
-Incoming
+This script can scan the rss feed list from config.json at a given interval. When the rss feed gets updated it can find an item matched with the keyword and push it to rpc port (6800 for aria2 and 16800 for motrix). More details can be found in the comments in config.json.
 
 Future
 ------

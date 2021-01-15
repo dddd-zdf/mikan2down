@@ -12,25 +12,23 @@ This script can scan the rss feed list from config.json at a given interval. Whe
 config.json
 -----------
 
-"interval": interval between each scan in seconds.
-"port": RPC port (16800 for motrix, 6800 for aria2 default)
-"list":[
-        {
-        "title": the name you want for the bangumi,
-        "rss": the rss url for the bangumi,
-        "key": the keyword to match for the file (most cases it should be the keyword for the language you want)
-        }
-]
+"interval": interval between each scan in seconds  
+"port": RPC port (16800 for motrix, 6800 for aria2 default)  
+"list":[  
+        {  
+        "title": the name you want for the bangumi,  
+        "rss": the rss url for the bangumi,  
+        "key": the keyword to match for the file (most cases it should be the keyword for the language you want)  
+        }  
+]  
 
-RSS url on mikan-project can be found here 
+RSS url on mikan-project can be found here  
 ![image](/img/rss.png)  
-
-
 
 rss example
 -----------
 
-This is the an example retreived from a mikan-project rss feed. Support for more sites may come in the future.
+This is the an example retreived from a mikan-project rss feed. Support for more sites may come in the future.  
 
 Future
 ------

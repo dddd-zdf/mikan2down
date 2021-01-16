@@ -34,7 +34,8 @@ Future
 ------
 
 to-do:  
-  - [ ] Usage in README    
+  - [ ] new module: browse    
+  - [x] ~~Usage in README~~    
   - [x] ~~fix bug repetitive download~~    
   - [x] ~~JSON file input~~  
   - [x] ~~multiple match~~  

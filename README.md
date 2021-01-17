@@ -38,6 +38,7 @@ Future
 ------
 
 to-do:  
+  - [ ] return to requests method (RSS method has a low-frequency-update issue)    
   - [ ] new module: browse    
   - [x] ~~Usage in README~~    
   - [x] ~~fix bug repetitive download~~    

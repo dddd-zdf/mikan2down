@@ -12,7 +12,6 @@ This script can scan the rss feed list from config.json at a given interval. Whe
 config.json
 -----------
 ```
->>>>>>> 3ffedb7fcf98438dbc333eddcafa868d9f8e6ea5
 "interval": interval between each scan in seconds  
 "port": RPC port (16800 for motrix, 6800 for aria2 default)  
 "list":[  

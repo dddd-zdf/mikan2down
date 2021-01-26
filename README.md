@@ -11,9 +11,6 @@ This script can scan the rss feed list from config.json at a given interval. Whe
 
 config.json
 -----------
-<<<<<<< HEAD
-'''
-=======
 ```
 >>>>>>> 3ffedb7fcf98438dbc333eddcafa868d9f8e6ea5
 "interval": interval between each scan in seconds  

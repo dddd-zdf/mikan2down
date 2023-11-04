@@ -22,8 +22,6 @@ config.json
         }  
 ]  
 ```
-RSS url on mikan-project can be found here  
-![image](/img/rss.jpg)  
 
 rss example
 -----------
